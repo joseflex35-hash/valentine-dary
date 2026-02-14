@@ -1,12 +1,1 @@
-// script.js
-
-// Function to display an alert when the button is clicked
-function showProposalMessage() {
-    alert('Will you be my Valentine?');
-}
-
-// Adding an event listener to the button
-window.onload = function() {
-    const button = document.getElementById('proposalButton');
-    button.addEventListener('click', showProposalMessage);
-};
+document.addEventListener('DOMContentLoaded', function() { const proposeBtn = document.getElementById('proposeBtn'); const modal = document.getElementById('popupModal'); const closeBtn = document.querySelector('.close'); proposeBtn.addEventListener('click', function() { modal.style.display = 'block'; }); closeBtn.addEventListener('click', function() { modal.style.display = 'none'; }); window.addEventListener('click', function(event) { if (event.target === modal) { modal.style.display = 'none'; } }); });
