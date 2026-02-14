@@ -1,0 +1,41 @@
+.romantic {
+    background-color: red;
+    color: gold;
+    font-family: 'Times New Roman', serif;
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.flower {
+    background-image: url('path_to_your_flower_image'); /* Add a path to a flower image */
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.btn-romantic {
+    background-color: gold;
+    border: none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-romantic:hover {
+    background-color: red;
+    color: gold;
+}
