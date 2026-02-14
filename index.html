@@ -4,20 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentine's Day Proposal</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <style>
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: white;
+            border: 2px solid pink;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Will You Be My Valentine?</h1>
-        <button id="proposeBtn">Of course!</button>
+    <h1>Happy Valentine's Day!</h1>
+    <button id="open-popup">Open Love Letter</button>
+    <div id="overlay"></div>
+    <div id="popup">
+        <p>Dear Dariana (papelito),</p>
+        <p>From the moment I looked into those beautiful brown eyes of yours, I knew I was going to be the luckiest guy ever. You are the love of my life, and every single day with you makes me happier than I ever thought possible.</p>
+        <p>I want to thank you for always being by my side, even when things get rough. Your love and support mean everything to me. No matter what challenges we face, I promise you that I will always be by your side—through thick and thin.</p>
+        <p>My love for you grows stronger by the second. Every moment with you, I fall more deeply in love with you. You make my heart complete, and I cannot imagine my life without you.</p>
+        <p>I thank God every day for blessing me with someone as incredible as you. You are my greatest blessing, my soulmate, and my forever. I love you with all my heart.</p>
+        <p>Forever yours,<br>Your Valentine</p>
+        <button id="close-popup">Close</button>
     </div>
-
-    <div id="popupModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Roses are red, violets are blue, will you accept my love, and be mine too?</p>
-        </div>
-    </div>
+    <script>
+        document.getElementById('open-popup').onclick = function() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        };
+        document.getElementById('close-popup').onclick = function() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        };
+    </script>
 </body>
 </html>
